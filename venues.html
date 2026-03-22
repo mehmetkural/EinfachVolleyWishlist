@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EinfachVolley — List Your Venue</title>
+  <meta name="description" content="Partner with EinfachVolley and get your volleyball venue in front of hundreds of active players." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EinfachVolley — List Your Venue" />
+  <meta property="og:description" content="Partner with EinfachVolley and get your venue in front of active players." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">EinfachVolley</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-text-link">For Players</a>
+        <a href="#venue-form" class="btn btn-sm">List Your Venue</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero-venue">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container hero-content reveal">
+      <span class="badge">Venue Partners</span>
+      <h1 class="hero-headline">Fill your courts.<br />Every week.</h1>
+      <p class="hero-sub">Partner with EinfachVolley and connect your venue with hundreds of active volleyball players in your area — for free.</p>
+      <a href="#venue-form" class="btn btn-primary btn-lg">Register Your Venue</a>
+      <p class="hero-note">We'll reach out before launch to get you set up.</p>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="problem section">
+    <div class="container reveal">
+      <h2 class="section-title">Why list on EinfachVolley?</h2>
+      <div class="problem-grid">
+        <div class="problem-item">
+          <div class="problem-icon">📣</div>
+          <p>Get discovered by local players actively looking for courts to play on</p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">📅</div>
+          <p>Players book directly through the app — no phone calls, no admin work</p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">💰</div>
+          <p>Free to list. Set your own pricing and availability — you stay in control</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="features section">
+    <div class="container">
+      <h2 class="section-title reveal">How it works.</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">📝</div>
+          <h3>Register</h3>
+          <p>Fill in your venue details below. We'll review and get in touch before launch.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">⚙️</div>
+          <h3>We Set You Up</h3>
+          <p>Our team adds your venue to the app with your courts, pricing, and availability.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🏐</div>
+          <h3>Players Find You</h3>
+          <p>Players nearby see your venue on the map and book slots for their matches.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📊</div>
+          <h3>Track Bookings</h3>
+          <p>See who's coming, how many players, and manage your courts from one dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUE FORM -->
+  <section class="waitlist section" id="venue-form">
+    <div class="container">
+      <div class="waitlist-box venue-form-box reveal">
+        <h2 class="waitlist-title">Register your venue.</h2>
+        <p class="waitlist-sub">Fill in the details below and we'll contact you before launch to get everything set up.</p>
+
+        <form id="venue-registration-form" novalidate>
+
+          <div class="field-group">
+            <label for="venue-name">Venue Name <span class="required">*</span></label>
+            <input type="text" id="venue-name" name="venue_name" placeholder="e.g. FEKI Troppauplatz" required />
+          </div>
+
+          <div class="field-group">
+            <label for="venue-address">Address <span class="required">*</span></label>
+            <input type="text" id="venue-address" name="venue_address" placeholder="Street, City" required />
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="contact-email">Contact Email <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="contact_email" placeholder="you@example.com" required autocomplete="email" />
+            </div>
+            <div class="field-group">
+              <label for="contact-phone">Phone (optional)</label>
+              <input type="tel" id="contact-phone" name="contact_phone" placeholder="+49 123 456789" />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Court Type <span class="required">*</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="court_type" value="Indoor" /> Indoor
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="court_type" value="Outdoor" /> Outdoor
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="court_type" value="Beach" /> Beach
+              </label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="num-courts">Number of Courts</label>
+              <input type="number" id="num-courts" name="num_courts" placeholder="e.g. 2" min="1" />
+            </div>
+            <div class="field-group">
+              <label for="pricing">Pricing</label>
+              <input type="text" id="pricing" name="pricing" placeholder="e.g. Free / €5 per person" />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Parking, access rules, equipment available…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Submit Venue</span>
+            <span class="btn-loading" hidden>Sending…</span>
+          </button>
+          <p class="form-error" id="venue-form-error" hidden></p>
+        </form>
+
+        <div id="venue-success-message" class="success-message" hidden>
+          <div class="success-icon">🎉</div>
+          <h3>Venue registered!</h3>
+          <p>We'll be in touch before launch to get your venue fully set up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">EinfachVolley</span>
+      <p class="footer-note">&copy; 2026 EinfachVolley. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="venue-script.js"></script>
+</body>
+</html>

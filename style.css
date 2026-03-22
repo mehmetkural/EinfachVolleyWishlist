@@ -507,6 +507,119 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
+   Nav links (for venues page)
+   ============================================================ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-text-link {
+  font-size: .9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.65);
+  transition: color var(--transition);
+}
+
+.nav-text-link:hover { color: #fff; }
+
+/* ============================================================
+   Venue hero accent
+   ============================================================ */
+.hero-venue {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213e 60%, #1a2744 100%);
+}
+
+/* ============================================================
+   Venue form extras
+   ============================================================ */
+.venue-form-box {
+  max-width: 780px;
+  text-align: left;
+}
+
+.venue-form-box .waitlist-title,
+.venue-form-box .waitlist-sub {
+  text-align: left;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  margin-bottom: 1.25rem;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field-group label {
+  font-size: .875rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .02em;
+}
+
+.required { color: var(--color-primary); }
+
+.field-group input,
+.field-group textarea {
+  padding: .8rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.07);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: .95rem;
+  outline: none;
+  transition: border-color var(--transition), background var(--transition);
+  resize: vertical;
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder { color: rgba(255,255,255,.35); }
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: var(--color-primary);
+  background: rgba(255,255,255,.11);
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: .25rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .95rem;
+  color: rgba(255,255,255,.8);
+  cursor: pointer;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.btn-full { width: 100%; margin-top: .5rem; }
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 640px) {
@@ -520,4 +633,8 @@ a { color: inherit; text-decoration: none; }
   #waitlist-form .btn { width: 100%; }
 
   .footer-inner { flex-direction: column; text-align: center; }
+
+  .field-row { grid-template-columns: 1fr; }
+
+  .nav-text-link { display: none; }
 }
