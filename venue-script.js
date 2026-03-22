@@ -5,7 +5,7 @@
 // Create it at https://formspree.io — keep it separate from the
 // player waitlist so submissions don't mix.
 // ============================================================
-const VENUE_FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_VENUE_FORM_ID';
+const VENUE_FORMSPREE_ENDPOINT = 'https://formspree.io/f/xvzwjzzl';
 
 // ============================================================
 // Venue Registration Form Submission
