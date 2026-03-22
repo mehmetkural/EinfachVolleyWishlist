@@ -323,6 +323,79 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
+   Screenshots Section
+   ============================================================ */
+.screenshots {
+  background: var(--color-bg-alt);
+  overflow: hidden;
+}
+
+.screenshots-sub {
+  text-align: center;
+  color: var(--color-muted);
+  margin-top: -.5rem;
+  margin-bottom: 3.5rem;
+  font-size: 1rem;
+}
+
+.screenshots-track {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.screenshot-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phone-frame {
+  width: 200px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 8px #1A1A2E,
+    0 0 0 10px #2d2d50,
+    var(--shadow-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-frame:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 0 0 8px #1A1A2E,
+    0 0 0 10px #2d2d50,
+    0 32px 60px rgba(0,0,0,.22);
+}
+
+.phone-frame img {
+  width: 100%;
+  display: block;
+}
+
+.screenshot-label {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  text-align: center;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .screenshots-track {
+    gap: 1.5rem;
+  }
+  .phone-frame {
+    width: 150px;
+    border-radius: 28px;
+  }
+}
+
+/* ============================================================
    Waitlist Section
    ============================================================ */
 .waitlist {
