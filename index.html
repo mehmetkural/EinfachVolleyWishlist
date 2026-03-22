@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EinfachVolley — Volleyball. Simplified.</title>
+  <meta name="description" content="EinfachVolley makes organizing games, tracking stats, and finding players effortless. Join the waitlist and be first to know when we launch." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EinfachVolley — Volleyball. Simplified." />
+  <meta property="og:description" content="Join the waitlist and be first to know when we launch." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">EinfachVolley</span>
+      <a href="#waitlist" class="btn btn-sm">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container hero-content reveal">
+      <span class="badge">Coming Soon</span>
+      <h1 class="hero-headline">Volleyball.<br />Simplified.</h1>
+      <p class="hero-sub">EinfachVolley makes organizing games, tracking attendance, and finding players effortless. No more WhatsApp chaos.</p>
+      <a href="#waitlist" class="btn btn-primary btn-lg">Join the Waitlist — It's Free</a>
+      <p class="hero-note">Be the first to know when we launch.</p>
+    </div>
+    <div class="hero-ball" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="95" fill="none" stroke="currentColor" stroke-width="8"/>
+        <path d="M100 5 Q145 40 145 100 Q145 160 100 195" fill="none" stroke="currentColor" stroke-width="8"/>
+        <path d="M100 5 Q55 40 55 100 Q55 160 100 195" fill="none" stroke="currentColor" stroke-width="8"/>
+        <path d="M5 100 Q40 145 100 145 Q160 145 195 100" fill="none" stroke="currentColor" stroke-width="8"/>
+        <path d="M5 100 Q40 55 100 55 Q160 55 195 100" fill="none" stroke="currentColor" stroke-width="8"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem section">
+    <div class="container reveal">
+      <h2 class="section-title">Organizing volleyball is harder than it should be.</h2>
+      <div class="problem-grid">
+        <div class="problem-item">
+          <div class="problem-icon">📱</div>
+          <p>Endless WhatsApp messages to coordinate a single game</p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">❓</div>
+          <p>No way to know who's actually showing up until the last minute</p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">🔍</div>
+          <p>Finding new players for your team feels impossible</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features section">
+    <div class="container">
+      <h2 class="section-title reveal">Everything your team needs, in one place.</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">📅</div>
+          <h3>Smart Scheduling</h3>
+          <p>Share one link. Everyone confirms their spot. No back-and-forth.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">✅</div>
+          <h3>Attendance Tracking</h3>
+          <p>Always know your headcount. Get notified when you have enough players.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🏐</div>
+          <h3>Player Discovery</h3>
+          <p>Find local volleyball players and grow your community effortlessly.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📊</div>
+          <h3>Stats & History</h3>
+          <p>Track your team's progress, results, and most loyal players.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST FORM -->
+  <section class="waitlist section" id="waitlist">
+    <div class="container">
+      <div class="waitlist-box reveal">
+        <h2 class="waitlist-title">Get early access.</h2>
+        <p class="waitlist-sub">Join the waitlist and be the first to know when EinfachVolley launches. No spam, ever.</p>
+
+        <form id="waitlist-form" novalidate>
+          <div class="form-row">
+            <input
+              type="email"
+              name="email"
+              id="email-input"
+              placeholder="your@email.com"
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Join the Waitlist</span>
+              <span class="btn-loading" hidden>Sending…</span>
+            </button>
+          </div>
+          <p class="form-error" id="form-error" hidden></p>
+        </form>
+
+        <div id="success-message" class="success-message" hidden>
+          <div class="success-icon">🎉</div>
+          <h3>You're on the list!</h3>
+          <p>We'll reach out at launch. Tell your volleyball friends!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">EinfachVolley</span>
+      <p class="footer-note">&copy; 2026 EinfachVolley. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
