@@ -98,28 +98,59 @@
 </head>
 <body class="bg-surface font-body text-on-surface antialiased">
 
-<!-- Top Navigation Bar -->
+<!-- ===================== NAV ===================== -->
 <nav class="fixed top-0 w-full z-50 bg-[#f6f6ff]/80 backdrop-blur-xl">
-  <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
-    <div class="text-2xl font-black tracking-tighter text-[#a63300]">EinfachVolley</div>
+  <div class="flex justify-between items-center h-16 md:h-20 px-6 md:px-8 max-w-7xl mx-auto">
+    <!-- Left: hamburger (mobile) + brand -->
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-[#a63300] md:hidden cursor-pointer">menu</span>
+      <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter text-[#a63300] italic uppercase">EinfachVolley</a>
+    </div>
+    <!-- Desktop links -->
     <div class="hidden md:flex gap-8 font-medium text-sm tracking-tight items-center">
       <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="#features">Features</a>
       <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="#how-it-works">How it Works</a>
       <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="#showcase">Showcase</a>
       <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="venues.html">For Venue Owners</a>
-      <a class="kinetic-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-200 shadow-lg shadow-primary/20" href="#cta">
+      <a class="kinetic-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-200 shadow-lg" href="#cta">
         Join Waitlist
       </a>
     </div>
-    <button class="md:hidden text-primary">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
+    <!-- Mobile: avatar -->
+    <div class="md:hidden w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+      <span class="material-symbols-outlined text-[#515c73] text-xl">person</span>
+    </div>
   </div>
 </nav>
 
-<main>
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center bg-inverse-surface overflow-hidden pt-20">
+<main class="pb-20 md:pb-0">
+
+  <!-- ===================== HERO ===================== -->
+
+  <!-- MOBILE HERO -->
+  <section class="md:hidden px-6 py-12 pt-24 flex flex-col items-center text-center overflow-hidden bg-surface">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+      <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+      <span class="text-primary text-xs font-bold uppercase tracking-widest">Now accepting waitlist</span>
+    </div>
+    <h1 class="font-black text-[3.5rem] leading-[1.05] tracking-tighter text-on-background mb-6 italic uppercase">
+      VOLLEYBALL.<br/>
+      <span class="text-primary">SIMPLIFIED.</span>
+    </h1>
+    <p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-sm">
+      No more group chat chaos. Just the court, your team, and the game you love.
+    </p>
+    <a href="#cta-mobile" class="kinetic-gradient text-on-primary font-bold px-8 py-4 rounded-xl shadow-2xl shadow-primary/30 mb-12 w-full max-w-xs text-center text-lg">
+      Join the Waitlist
+    </a>
+    <div class="relative w-full max-w-xs mx-auto">
+      <div class="absolute inset-0 kinetic-gradient blur-3xl opacity-20 -z-10 rounded-full transform scale-150"></div>
+      <img alt="App Mockup" class="w-full h-auto drop-shadow-2xl rounded-3xl" src="assets/screen-dashboard.png"/>
+    </div>
+  </section>
+
+  <!-- DESKTOP HERO -->
+  <section class="hidden md:flex relative min-h-screen items-center bg-inverse-surface overflow-hidden pt-20">
     <div class="absolute inset-0 opacity-20">
       <img alt="Volleyball action" class="w-full h-full object-cover grayscale" src="assets/screen-matches.png"/>
     </div>
@@ -130,14 +161,14 @@
           <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
           <span class="text-primary-container text-xs font-bold uppercase tracking-widest">Now accepting waitlist</span>
         </div>
-        <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] italic uppercase">
+        <h1 class="text-8xl font-black text-white tracking-tighter leading-[0.9] italic uppercase">
           Volleyball.<br/>
           <span class="text-primary-fixed">Simplified.</span>
         </h1>
         <p class="text-xl text-outline-variant max-w-md font-light leading-relaxed">
           The kinetic hub for volleyball communities. Organize matches, track attendance, and find your squad without the WhatsApp chaos.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <div class="flex gap-4 pt-4">
           <a class="kinetic-gradient text-on-primary px-8 py-4 rounded-xl font-bold text-lg text-center hover:scale-105 transition-all duration-300 shadow-2xl shadow-primary/30" href="#cta">
             Join the Waitlist
           </a>
@@ -146,7 +177,7 @@
           </a>
         </div>
       </div>
-      <div class="hidden md:block relative">
+      <div class="relative">
         <div class="relative z-20 transform rotate-6 hover:rotate-0 transition-transform duration-700">
           <div class="bg-surface-container-lowest p-4 rounded-3xl shadow-[0_40px_80px_rgba(0,0,0,0.4)] border border-white/10">
             <img alt="App Dashboard" class="rounded-2xl w-full" src="assets/screen-dashboard.png"/>
@@ -157,12 +188,41 @@
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="py-24 bg-surface">
+  <!-- ===================== PROBLEM ===================== -->
+
+  <!-- MOBILE PROBLEM -->
+  <section class="md:hidden bg-surface-container-low px-6 py-20">
+    <div class="max-w-md mx-auto">
+      <span class="text-primary font-bold uppercase tracking-widest text-xs block mb-4">The Problem</span>
+      <h2 class="font-bold text-3xl text-on-background mb-10 leading-tight">
+        Stop the WhatsApp <span class="text-primary">Chaos.</span>
+      </h2>
+      <div class="space-y-6">
+        <div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary shadow-sm">
+          <span class="material-symbols-outlined text-primary mb-3 text-3xl block">chat</span>
+          <h3 class="font-bold text-xl mb-2">The Reply-All Trap</h3>
+          <p class="text-on-surface-variant text-sm">One question leads to 50 notifications. Important details get buried in the noise instantly.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-secondary shadow-sm">
+          <span class="material-symbols-outlined text-secondary mb-3 text-3xl block">event_busy</span>
+          <h3 class="font-bold text-xl mb-2">Unclear Attendance</h3>
+          <p class="text-on-surface-variant text-sm">Spent 20 minutes counting thumbs-up emojis? We've all been there. It's time for a change.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-tertiary shadow-sm">
+          <span class="material-symbols-outlined text-tertiary mb-3 text-3xl block">group_remove</span>
+          <h3 class="font-bold text-xl mb-2">Last-Minute Drops</h3>
+          <p class="text-on-surface-variant text-sm">Someone cancels 10 minutes before tip-off and you have no sub list. Game ruined.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESKTOP PROBLEM -->
+  <section class="hidden md:block py-24 bg-surface">
     <div class="max-w-7xl mx-auto px-8">
       <div class="mb-16">
         <span class="text-primary font-bold uppercase tracking-widest text-sm">The Struggle</span>
-        <h2 class="text-4xl md:text-5xl font-black tracking-tight mt-4 text-on-surface">Stop the WhatsApp <span class="text-secondary">Chaos.</span></h2>
+        <h2 class="text-5xl font-black tracking-tight mt-4 text-on-surface">Stop the WhatsApp <span class="text-secondary">Chaos.</span></h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="p-8 rounded-3xl bg-surface-container-low space-y-4">
@@ -190,16 +250,55 @@
     </div>
   </section>
 
-  <!-- Features Section (Bento Grid) -->
-  <section class="py-24 bg-surface-container-low" id="features">
+  <!-- ===================== FEATURES ===================== -->
+
+  <!-- MOBILE FEATURES -->
+  <section class="md:hidden px-6 py-20 bg-surface" id="features">
+    <div class="text-center mb-12">
+      <span class="text-primary font-bold uppercase tracking-widest text-xs block mb-4">The Solution</span>
+      <h2 class="font-bold text-[1.75rem] text-on-background uppercase italic tracking-tighter">BUILT FOR THE COURT.</h2>
+    </div>
+    <div class="flex flex-col gap-6">
+      <div class="bg-surface-container-low p-8 rounded-2xl">
+        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6 text-on-primary">
+          <span class="material-symbols-outlined">calendar_month</span>
+        </div>
+        <h3 class="font-bold text-2xl mb-3">Dynamic Scheduling</h3>
+        <p class="text-on-surface-variant leading-relaxed">Smart court booking and recurring match setups that actually work for your rhythm.</p>
+      </div>
+      <div class="bg-surface-container-low p-8 rounded-2xl">
+        <div class="w-12 h-12 bg-tertiary rounded-lg flex items-center justify-center mb-6 text-on-tertiary">
+          <span class="material-symbols-outlined">how_to_reg</span>
+        </div>
+        <h3 class="font-bold text-2xl mb-3">Attendance 2.0</h3>
+        <p class="text-on-surface-variant leading-relaxed">One-tap confirmation. Automatic sub notifications when someone can't make it.</p>
+      </div>
+      <div class="bg-surface-container-low p-8 rounded-2xl">
+        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-6 text-on-secondary">
+          <span class="material-symbols-outlined">person_search</span>
+        </div>
+        <h3 class="font-bold text-2xl mb-3">Player Discovery</h3>
+        <p class="text-on-surface-variant leading-relaxed">Need a 6th player? Find local athletes matching your skill level in seconds.</p>
+      </div>
+      <div class="bg-surface-container-low p-8 rounded-2xl">
+        <div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center mb-6 text-on-primary-container">
+          <span class="material-symbols-outlined">monitoring</span>
+        </div>
+        <h3 class="font-bold text-2xl mb-3">Stats &amp; History</h3>
+        <p class="text-on-surface-variant leading-relaxed">Track your wins, losses, and game-time performance across every season.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESKTOP FEATURES (Bento Grid) -->
+  <section class="hidden md:block py-24 bg-surface-container-low" id="features-desktop">
     <div class="max-w-7xl mx-auto px-8">
       <div class="text-center mb-16 space-y-4">
-        <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">Built for the <span class="text-primary">Court.</span></h2>
+        <h2 class="text-6xl font-black tracking-tighter uppercase italic">Built for the <span class="text-primary">Court.</span></h2>
         <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Everything you need to run a professional-grade community without the professional-grade effort.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
-        <!-- Feature 1: Scheduling -->
-        <div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between overflow-hidden relative group">
+      <div class="grid grid-cols-12 gap-6 auto-rows-[280px]">
+        <div class="col-span-8 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between overflow-hidden relative group">
           <div class="max-w-md relative z-10">
             <span class="text-primary font-bold text-xs uppercase tracking-widest">Smart Core</span>
             <h3 class="text-3xl font-bold mt-2">Dynamic Scheduling</h3>
@@ -209,8 +308,7 @@
             <span class="material-symbols-outlined" style="font-size: 200px;">calendar_month</span>
           </div>
         </div>
-        <!-- Feature 2: Attendance -->
-        <div class="md:col-span-4 bg-[#080e1c] p-8 rounded-[2rem] text-white flex flex-col justify-between">
+        <div class="col-span-4 bg-[#080e1c] p-8 rounded-[2rem] text-white flex flex-col justify-between">
           <div class="w-10 h-10 rounded-xl kinetic-gradient flex items-center justify-center">
             <span class="material-symbols-outlined">check_circle</span>
           </div>
@@ -219,8 +317,7 @@
             <p class="text-outline-variant mt-2 text-sm">Real-time RSVP tracking with waitlist automation.</p>
           </div>
         </div>
-        <!-- Feature 3: Player Discovery -->
-        <div class="md:col-span-4 bg-tertiary-container p-8 rounded-[2rem] flex flex-col justify-between text-on-tertiary-container">
+        <div class="col-span-4 bg-tertiary-container p-8 rounded-[2rem] flex flex-col justify-between text-on-tertiary-container">
           <h3 class="text-2xl font-bold">Player Discovery</h3>
           <p class="font-medium">Find local talent that matches your skill level and playing style.</p>
           <div class="flex -space-x-3">
@@ -236,8 +333,7 @@
             <div class="w-10 h-10 rounded-full border-2 border-tertiary-container bg-tertiary flex items-center justify-center text-white text-xs font-bold">+24</div>
           </div>
         </div>
-        <!-- Feature 4: Stats -->
-        <div class="md:col-span-8 bg-surface-container-highest p-8 rounded-[2rem] flex flex-col md:flex-row items-center gap-8 overflow-hidden">
+        <div class="col-span-8 bg-surface-container-highest p-8 rounded-[2rem] flex flex-row items-center gap-8 overflow-hidden">
           <div class="flex-1">
             <h3 class="text-2xl font-bold text-on-surface">Stats &amp; History</h3>
             <p class="text-on-surface-variant mt-2">Track your win-rate, MVP awards, and seasonal progression in a beautiful editorial dashboard.</p>
@@ -256,8 +352,37 @@
     </div>
   </section>
 
-  <!-- Showcase Section -->
-  <section class="py-24 bg-surface overflow-hidden" id="showcase">
+  <!-- ===================== SHOWCASE ===================== -->
+
+  <!-- MOBILE SHOWCASE -->
+  <section class="md:hidden px-6 py-24 bg-inverse-surface text-surface overflow-hidden" id="showcase">
+    <div class="flex flex-col gap-12">
+      <div class="space-y-6">
+        <span class="text-primary-container font-bold uppercase tracking-widest text-xs">The Interface</span>
+        <h2 class="font-bold text-4xl leading-none italic tracking-tighter text-white">ALWAYS IN FLOW.</h2>
+        <ul class="space-y-4 pt-4">
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-container">check_circle</span>
+            <span class="text-lg text-white">Real-time match updates</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-container">check_circle</span>
+            <span class="text-lg text-white">Intuitive team builder</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-container">check_circle</span>
+            <span class="text-lg text-white">Secure local payments</span>
+          </li>
+        </ul>
+      </div>
+      <div class="relative -mr-6">
+        <img alt="Mobile App Showcase" class="w-full h-auto rounded-l-3xl shadow-2xl" src="assets/screen-venues-list.png"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESKTOP SHOWCASE -->
+  <section class="hidden md:block py-24 bg-surface overflow-hidden" id="showcase-desktop">
     <div class="max-w-7xl mx-auto px-8">
       <div class="grid md:grid-cols-2 gap-20 items-center">
         <div class="space-y-12">
@@ -306,22 +431,50 @@
     </div>
   </section>
 
-  <!-- Final CTA Section -->
-  <section class="py-24 bg-surface" id="cta">
+  <!-- ===================== CTA ===================== -->
+
+  <!-- MOBILE CTA -->
+  <section class="md:hidden px-6 py-24 bg-surface-container-low text-center" id="cta-mobile">
+    <h2 class="font-black text-4xl mb-6 tracking-tighter text-on-background uppercase italic">READY TO ELEVATE?</h2>
+    <p class="text-on-surface-variant mb-10 max-w-xs mx-auto">Be the first to experience the future of volleyball community management.</p>
+    <div class="w-full max-w-sm mx-auto bg-surface-container-lowest p-8 rounded-2xl shadow-xl border-l-8 border-primary">
+      <form id="waitlist-form-mobile" action="https://formspree.io/f/mlgpydan" method="POST" class="space-y-4">
+        <div class="text-left">
+          <label class="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Email Address</label>
+          <input
+            class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary rounded-lg py-4 px-4 font-bold text-on-surface placeholder:text-outline-variant"
+            placeholder="volley@legend.com"
+            type="email"
+            name="email"
+            required
+          />
+        </div>
+        <button type="submit" id="submit-btn-mobile" class="kinetic-gradient w-full py-5 rounded-lg text-on-primary font-black uppercase tracking-widest shadow-lg active:scale-95 transition-transform">
+          Join the Waitlist
+        </button>
+        <p class="text-[0.65rem] text-outline mt-4">By joining, you agree to receive early access updates. No spam, ever.</p>
+      </form>
+      <div id="success-msg-mobile" class="hidden text-primary font-semibold pt-4">You're on the list! We'll be in touch soon.</div>
+      <div id="error-msg-mobile" class="hidden text-red-500 font-semibold pt-4">Something went wrong. Please try again.</div>
+    </div>
+  </section>
+
+  <!-- DESKTOP CTA -->
+  <section class="hidden md:block py-24 bg-surface" id="cta">
     <div class="max-w-5xl mx-auto px-8">
-      <div class="bg-inverse-surface rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center space-y-8">
+      <div class="bg-inverse-surface rounded-[3rem] p-20 relative overflow-hidden text-center space-y-8">
         <div class="absolute inset-0 opacity-10 pointer-events-none">
           <div class="absolute top-0 left-0 w-full h-full kinetic-gradient mix-blend-overlay"></div>
         </div>
         <div class="relative z-10 space-y-6">
           <span class="text-primary-fixed font-bold uppercase tracking-[0.3em] text-sm">Phase 1: Early Access</span>
-          <h2 class="text-4xl md:text-7xl font-black text-white tracking-tighter italic uppercase leading-none">
+          <h2 class="text-7xl font-black text-white tracking-tighter italic uppercase leading-none">
             Ready to <span class="text-primary-fixed">Elevate?</span>
           </h2>
           <p class="text-outline-variant text-lg max-w-xl mx-auto leading-relaxed">
             Join the limited group of beta testers and be the first to launch your community on EinfachVolley.
           </p>
-          <form id="waitlist-form" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 pt-6" action="https://formspree.io/f/mlgpydan" method="POST">
+          <form id="waitlist-form" class="max-w-md mx-auto flex gap-3 pt-6" action="https://formspree.io/f/mlgpydan" method="POST">
             <input
               class="flex-1 bg-white/10 border-none rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-primary-fixed transition-all placeholder:text-outline-variant"
               placeholder="Enter your email"
@@ -340,15 +493,16 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <!-- Footer -->
 <footer class="bg-[#080e1c] w-full py-12 px-8">
-  <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
-    <div class="text-lg font-bold text-white">EinfachVolley</div>
-    <div class="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-widest font-light text-[#a7adc0]">
-      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Privacy Policy</a>
-      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Terms of Service</a>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto text-center md:text-left">
+    <div class="text-lg font-bold text-white italic uppercase tracking-tight">EinfachVolley</div>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs uppercase tracking-widest font-light text-[#a7adc0]">
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Privacy</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Terms</a>
       <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Contact</a>
       <a class="hover:text-[#ff7949] transition-all duration-300" href="venues.html">For Venue Owners</a>
     </div>
@@ -358,7 +512,28 @@
   </div>
 </footer>
 
+<!-- Mobile Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-[#f6f6ff]/90 backdrop-blur-xl z-50 flex justify-around items-center px-4 py-3 md:hidden border-t border-surface-container">
+  <a href="#" class="flex flex-col items-center gap-1 text-[#a63300]">
+    <span class="material-symbols-outlined">sports_volleyball</span>
+    <span class="text-[10px] font-bold uppercase tracking-tighter">Find</span>
+  </a>
+  <a href="venues.html" class="flex flex-col items-center gap-1 text-[#515c73]">
+    <span class="material-symbols-outlined">location_on</span>
+    <span class="text-[10px] font-bold uppercase tracking-tighter">Venues</span>
+  </a>
+  <a href="#features" class="flex flex-col items-center gap-1 text-[#515c73]">
+    <span class="material-symbols-outlined">emoji_events</span>
+    <span class="text-[10px] font-bold uppercase tracking-tighter">Features</span>
+  </a>
+  <a href="#cta-mobile" class="flex flex-col items-center gap-1 text-[#515c73]">
+    <span class="material-symbols-outlined">person</span>
+    <span class="text-[10px] font-bold uppercase tracking-tighter">Join</span>
+  </a>
+</nav>
+
 <script>
+  // Desktop form
   const form = document.getElementById('waitlist-form');
   const submitBtn = document.getElementById('submit-btn');
   const successMsg = document.getElementById('success-msg');
@@ -368,7 +543,6 @@
     e.preventDefault();
     submitBtn.textContent = 'Joining...';
     submitBtn.disabled = true;
-
     try {
       const res = await fetch(form.action, {
         method: 'POST',
@@ -387,6 +561,37 @@
       errorMsg.classList.remove('hidden');
       submitBtn.textContent = 'Join Waitlist';
       submitBtn.disabled = false;
+    }
+  });
+
+  // Mobile form
+  const formMobile = document.getElementById('waitlist-form-mobile');
+  const submitBtnMobile = document.getElementById('submit-btn-mobile');
+  const successMsgMobile = document.getElementById('success-msg-mobile');
+  const errorMsgMobile = document.getElementById('error-msg-mobile');
+
+  formMobile.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtnMobile.textContent = 'Joining...';
+    submitBtnMobile.disabled = true;
+    try {
+      const res = await fetch(formMobile.action, {
+        method: 'POST',
+        body: new FormData(formMobile),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        formMobile.classList.add('hidden');
+        successMsgMobile.classList.remove('hidden');
+      } else {
+        errorMsgMobile.classList.remove('hidden');
+        submitBtnMobile.textContent = 'Join the Waitlist';
+        submitBtnMobile.disabled = false;
+      }
+    } catch {
+      errorMsgMobile.classList.remove('hidden');
+      submitBtnMobile.textContent = 'Join the Waitlist';
+      submitBtnMobile.disabled = false;
     }
   });
 </script>
