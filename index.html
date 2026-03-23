@@ -1,196 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EinfachVolley — Volleyball. Simplified.</title>
-  <meta name="description" content="EinfachVolley makes organizing games, tracking stats, and finding players effortless. Join the waitlist and be first to know when we launch." />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EinfachVolley | Volleyball. Simplified.</title>
+<meta name="description" content="EinfachVolley makes organizing games, tracking stats, and finding players effortless. Join the waitlist and be first to know when we launch." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="EinfachVolley — Volleyball. Simplified." />
-  <meta property="og:description" content="Join the waitlist and be first to know when we launch." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og-image.png" />
+<!-- Open Graph -->
+<meta property="og:title" content="EinfachVolley — Volleyball. Simplified." />
+<meta property="og:description" content="Join the waitlist and be first to know when we launch." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/og-image.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  .kinetic-gradient {
+    background: linear-gradient(135deg, #a63300 0%, #ff7949 100%);
+  }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f6f6ff; }
+  ::-webkit-scrollbar-thumb { background: #cbd4f1; border-radius: 10px; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-highest": "#d4dcf8",
+          "tertiary": "#853d97",
+          "tertiary-fixed": "#ef9dff",
+          "error-dim": "#9f0519",
+          "secondary-fixed": "#d7e2ff",
+          "secondary-container": "#d7e2ff",
+          "surface-bright": "#f6f6ff",
+          "outline": "#717688",
+          "on-surface": "#292e3e",
+          "on-background": "#292e3e",
+          "error-container": "#fb5151",
+          "on-surface-variant": "#555b6c",
+          "tertiary-dim": "#78308a",
+          "inverse-on-surface": "#979caf",
+          "tertiary-fixed-dim": "#e190f1",
+          "surface-tint": "#a63300",
+          "primary": "#a63300",
+          "on-primary-fixed-variant": "#551600",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-container": "#475269",
+          "surface-dim": "#cbd4f1",
+          "secondary-fixed-dim": "#c9d4f0",
+          "on-secondary-fixed": "#353f56",
+          "inverse-surface": "#080e1c",
+          "on-primary-fixed": "#000000",
+          "on-secondary": "#eff2ff",
+          "on-primary": "#ffefeb",
+          "surface-variant": "#d4dcf8",
+          "tertiary-container": "#ef9dff",
+          "on-tertiary": "#ffeefc",
+          "primary-fixed-dim": "#f7652f",
+          "on-tertiary-fixed": "#400050",
+          "secondary": "#515c73",
+          "inverse-primary": "#fe6a34",
+          "surface-container-low": "#edf0ff",
+          "on-primary-container": "#451000",
+          "primary-dim": "#922c00",
+          "primary-fixed": "#ff7949",
+          "background": "#f6f6ff",
+          "on-error": "#ffefee",
+          "secondary-dim": "#455067",
+          "primary-container": "#ff7949",
+          "outline-variant": "#a7adc0",
+          "on-tertiary-container": "#5e1470",
+          "on-tertiary-fixed-variant": "#681f7a",
+          "surface-container-high": "#dae2fc",
+          "surface-container": "#e1e8ff",
+          "on-secondary-fixed-variant": "#515c73",
+          "surface": "#f6f6ff",
+          "on-error-container": "#570008",
+          "error": "#b31b25"
+        },
+        fontFamily: {
+          "headline": ["Lexend"],
+          "body": ["Lexend"],
+          "label": ["Lexend"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
 </head>
-<body>
+<body class="bg-surface font-body text-on-surface antialiased">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">EinfachVolley</a>
-      <div class="nav-links">
-        <a href="venues.html" class="nav-text-link">For Venue Owners</a>
-        <a href="#waitlist" class="btn btn-sm">Join Waitlist</a>
-      </div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f6f6ff]/80 backdrop-blur-xl">
+  <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+    <div class="text-2xl font-black tracking-tighter text-[#a63300]">EinfachVolley</div>
+    <div class="hidden md:flex gap-8 font-medium text-sm tracking-tight items-center">
+      <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="#features">Features</a>
+      <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="#how-it-works">How it Works</a>
+      <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="#showcase">Showcase</a>
+      <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="venues.html">For Venue Owners</a>
+      <a class="kinetic-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-200 shadow-lg shadow-primary/20" href="#cta">
+        Join Waitlist
+      </a>
     </div>
-  </nav>
+    <button class="md:hidden text-primary">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg-pattern" aria-hidden="true"></div>
-    <div class="container hero-content reveal">
-      <span class="badge">Coming Soon</span>
-      <h1 class="hero-headline">Volleyball.<br />Simplified.</h1>
-      <p class="hero-sub">EinfachVolley makes organizing games, tracking attendance, and finding players effortless. No more WhatsApp chaos.</p>
-      <a href="#waitlist" class="btn btn-primary btn-lg">Join the Waitlist — It's Free</a>
-      <p class="hero-note">Be the first to know when we launch.</p>
+<main>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center bg-inverse-surface overflow-hidden pt-20">
+    <div class="absolute inset-0 opacity-20">
+      <img alt="Volleyball action" class="w-full h-full object-cover grayscale" src="assets/screen-matches.png"/>
     </div>
-    <div class="hero-ball" aria-hidden="true">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="95" fill="none" stroke="currentColor" stroke-width="8"/>
-        <path d="M100 5 Q145 40 145 100 Q145 160 100 195" fill="none" stroke="currentColor" stroke-width="8"/>
-        <path d="M100 5 Q55 40 55 100 Q55 160 100 195" fill="none" stroke="currentColor" stroke-width="8"/>
-        <path d="M5 100 Q40 145 100 145 Q160 145 195 100" fill="none" stroke="currentColor" stroke-width="8"/>
-        <path d="M5 100 Q40 55 100 55 Q160 55 195 100" fill="none" stroke="currentColor" stroke-width="8"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- PROBLEM -->
-  <section class="problem section">
-    <div class="container reveal">
-      <h2 class="section-title">Organizing volleyball is harder than it should be.</h2>
-      <div class="problem-grid">
-        <div class="problem-item">
-          <div class="problem-icon">📱</div>
-          <p>Endless WhatsApp messages to coordinate a single game</p>
+    <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-1/3 aspect-square kinetic-gradient rounded-full blur-[120px] opacity-30"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span class="text-primary-container text-xs font-bold uppercase tracking-widest">Now accepting waitlist</span>
         </div>
-        <div class="problem-item">
-          <div class="problem-icon">❓</div>
-          <p>No way to know who's actually showing up until the last minute</p>
-        </div>
-        <div class="problem-item">
-          <div class="problem-icon">🔍</div>
-          <p>Finding new players for your team feels impossible</p>
+        <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] italic uppercase">
+          Volleyball.<br/>
+          <span class="text-primary-fixed">Simplified.</span>
+        </h1>
+        <p class="text-xl text-outline-variant max-w-md font-light leading-relaxed">
+          The kinetic hub for volleyball communities. Organize matches, track attendance, and find your squad without the WhatsApp chaos.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a class="kinetic-gradient text-on-primary px-8 py-4 rounded-xl font-bold text-lg text-center hover:scale-105 transition-all duration-300 shadow-2xl shadow-primary/30" href="#cta">
+            Join the Waitlist
+          </a>
+          <a class="bg-surface-container-low/10 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg text-center hover:bg-white/5 transition-all" href="#features">
+            See how it works
+          </a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features section">
-    <div class="container">
-      <h2 class="section-title reveal">Everything your team needs, in one place.</h2>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon">📅</div>
-          <h3>Smart Scheduling</h3>
-          <p>Share one link. Everyone confirms their spot. No back-and-forth.</p>
+      <div class="hidden md:block relative">
+        <div class="relative z-20 transform rotate-6 hover:rotate-0 transition-transform duration-700">
+          <div class="bg-surface-container-lowest p-4 rounded-3xl shadow-[0_40px_80px_rgba(0,0,0,0.4)] border border-white/10">
+            <img alt="App Dashboard" class="rounded-2xl w-full" src="assets/screen-dashboard.png"/>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon">✅</div>
-          <h3>Attendance Tracking</h3>
-          <p>Always know your headcount. Get notified when you have enough players.</p>
-        </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon">🏐</div>
-          <h3>Player Discovery</h3>
-          <p>Find local volleyball players and grow your community effortlessly.</p>
-        </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon">📊</div>
-          <h3>Stats & History</h3>
-          <p>Track your team's progress, results, and most loyal players.</p>
-        </div>
+        <div class="absolute -bottom-10 -left-10 w-full h-full border-2 border-primary/30 rounded-3xl -z-10 rotate-12"></div>
       </div>
     </div>
   </section>
 
-  <!-- APP SCREENSHOTS -->
-  <section class="screenshots section">
-    <div class="container">
-      <h2 class="section-title reveal">See it in action.</h2>
-      <p class="screenshots-sub reveal">A real look at the app — built and working.</p>
-      <div class="screenshots-track">
-        <div class="screenshot-item reveal">
-          <div class="phone-frame">
-            <img src="assets/screen-matches.png" alt="Active Matches screen" />
+  <!-- Problem Section -->
+  <section class="py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-sm">The Struggle</span>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight mt-4 text-on-surface">Stop the WhatsApp <span class="text-secondary">Chaos.</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-3xl bg-surface-container-low space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-error/10 flex items-center justify-center text-error">
+            <span class="material-symbols-outlined">forum</span>
           </div>
-          <p class="screenshot-label">Browse Matches</p>
+          <h3 class="text-xl font-bold">Endless Threading</h3>
+          <p class="text-on-surface-variant leading-relaxed">Stop scrolling through 200+ messages just to find out where and when the game starts.</p>
         </div>
-        <div class="screenshot-item reveal">
-          <div class="phone-frame">
-            <img src="assets/screen-venues-map.png" alt="Venues map screen" />
+        <div class="p-8 rounded-3xl bg-surface-container-low space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-error/10 flex items-center justify-center text-error">
+            <span class="material-symbols-outlined">person_off</span>
           </div>
-          <p class="screenshot-label">Find Venues</p>
+          <h3 class="text-xl font-bold">Attendance Guesswork</h3>
+          <p class="text-on-surface-variant leading-relaxed">No more "maybe" or last-minute dropouts. Automated tracking keeps the roster locked.</p>
         </div>
-        <div class="screenshot-item reveal">
-          <div class="phone-frame">
-            <img src="assets/screen-venues-list.png" alt="Venues list screen" />
+        <div class="p-8 rounded-3xl bg-surface-container-low space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-error/10 flex items-center justify-center text-error">
+            <span class="material-symbols-outlined">search_off</span>
           </div>
-          <p class="screenshot-label">Venue List</p>
-        </div>
-        <div class="screenshot-item reveal">
-          <div class="phone-frame">
-            <img src="assets/screen-dashboard.png" alt="Dashboard screen" />
-          </div>
-          <p class="screenshot-label">Your Dashboard</p>
-        </div>
-        <div class="screenshot-item reveal">
-          <div class="phone-frame">
-            <img src="assets/screen-profile.png" alt="Profile screen" />
-          </div>
-          <p class="screenshot-label">Player Profile</p>
-        </div>
-        <div class="screenshot-item reveal">
-          <div class="phone-frame">
-            <img src="assets/screen-create-match-2.png" alt="Create match screen" />
-          </div>
-          <p class="screenshot-label">Create a Match</p>
+          <h3 class="text-xl font-bold">Fragmented Groups</h3>
+          <p class="text-on-surface-variant leading-relaxed">Finding new players shouldn't require knowing someone who knows someone. Discovery is built-in.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WAITLIST FORM -->
-  <section class="waitlist section" id="waitlist">
-    <div class="container">
-      <div class="waitlist-box reveal">
-        <h2 class="waitlist-title">Get early access.</h2>
-        <p class="waitlist-sub">Join the waitlist and be the first to know when EinfachVolley launches. No spam, ever.</p>
+  <!-- Features Section (Bento Grid) -->
+  <section class="py-24 bg-surface-container-low" id="features">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">Built for the <span class="text-primary">Court.</span></h2>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Everything you need to run a professional-grade community without the professional-grade effort.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
+        <!-- Feature 1: Scheduling -->
+        <div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between overflow-hidden relative group">
+          <div class="max-w-md relative z-10">
+            <span class="text-primary font-bold text-xs uppercase tracking-widest">Smart Core</span>
+            <h3 class="text-3xl font-bold mt-2">Dynamic Scheduling</h3>
+            <p class="text-on-surface-variant mt-4">One-tap match creation with automated reminders and venue integration.</p>
+          </div>
+          <div class="absolute right-0 bottom-0 w-1/2 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span class="material-symbols-outlined" style="font-size: 200px;">calendar_month</span>
+          </div>
+        </div>
+        <!-- Feature 2: Attendance -->
+        <div class="md:col-span-4 bg-[#080e1c] p-8 rounded-[2rem] text-white flex flex-col justify-between">
+          <div class="w-10 h-10 rounded-xl kinetic-gradient flex items-center justify-center">
+            <span class="material-symbols-outlined">check_circle</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold">Attendance 2.0</h3>
+            <p class="text-outline-variant mt-2 text-sm">Real-time RSVP tracking with waitlist automation.</p>
+          </div>
+        </div>
+        <!-- Feature 3: Player Discovery -->
+        <div class="md:col-span-4 bg-tertiary-container p-8 rounded-[2rem] flex flex-col justify-between text-on-tertiary-container">
+          <h3 class="text-2xl font-bold">Player Discovery</h3>
+          <p class="font-medium">Find local talent that matches your skill level and playing style.</p>
+          <div class="flex -space-x-3">
+            <div class="w-10 h-10 rounded-full border-2 border-tertiary-container bg-surface-dim overflow-hidden">
+              <img alt="user" src="assets/screen-profile.png" class="w-full h-full object-cover"/>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-tertiary-container bg-surface-dim overflow-hidden">
+              <img alt="user" src="assets/screen-profile.png" class="w-full h-full object-cover"/>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-tertiary-container bg-surface-dim overflow-hidden">
+              <img alt="user" src="assets/screen-profile.png" class="w-full h-full object-cover"/>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-tertiary-container bg-tertiary flex items-center justify-center text-white text-xs font-bold">+24</div>
+          </div>
+        </div>
+        <!-- Feature 4: Stats -->
+        <div class="md:col-span-8 bg-surface-container-highest p-8 rounded-[2rem] flex flex-col md:flex-row items-center gap-8 overflow-hidden">
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold text-on-surface">Stats &amp; History</h3>
+            <p class="text-on-surface-variant mt-2">Track your win-rate, MVP awards, and seasonal progression in a beautiful editorial dashboard.</p>
+          </div>
+          <div class="flex-1 w-full bg-white/50 backdrop-blur rounded-2xl p-4 shadow-sm">
+            <div class="h-32 flex items-end gap-2">
+              <div class="flex-1 kinetic-gradient h-[40%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[70%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[55%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[90%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[45%] rounded-t-lg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <form id="waitlist-form" novalidate>
-          <div class="form-row">
+  <!-- Showcase Section -->
+  <section class="py-24 bg-surface overflow-hidden" id="showcase">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid md:grid-cols-2 gap-20 items-center">
+        <div class="space-y-12">
+          <div class="space-y-4">
+            <h2 class="text-5xl font-black tracking-tighter uppercase italic">Always in <span class="text-primary">Flow.</span></h2>
+            <p class="text-on-surface-variant text-lg leading-relaxed">Designed for high-speed mobile interaction. Whether you're on the court or on the go, EinfachVolley keeps you connected.</p>
+          </div>
+          <div class="space-y-8" id="how-it-works">
+            <div class="flex gap-6 items-start">
+              <div class="w-8 h-8 rounded-full kinetic-gradient flex-shrink-0 flex items-center justify-center text-white font-bold text-sm">1</div>
+              <div>
+                <h4 class="font-bold text-lg">Browse Matches</h4>
+                <p class="text-on-surface-variant">Find local games based on skill level, location, and time.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-8 h-8 rounded-full kinetic-gradient flex-shrink-0 flex items-center justify-center text-white font-bold text-sm">2</div>
+              <div>
+                <h4 class="font-bold text-lg">Secure Your Spot</h4>
+                <p class="text-on-surface-variant">One-tap join. Real-time updates on roster status.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-8 h-8 rounded-full kinetic-gradient flex-shrink-0 flex items-center justify-center text-white font-bold text-sm">3</div>
+              <div>
+                <h4 class="font-bold text-lg">Track Progress</h4>
+                <p class="text-on-surface-variant">See your game history and stats grow after every match.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="relative z-10 mx-auto w-72 aspect-[9/19] bg-[#080e1c] rounded-[3rem] p-3 border-[8px] border-[#1a202c] shadow-2xl">
+            <div class="w-full h-full bg-surface rounded-[2.2rem] overflow-hidden">
+              <img alt="App Screen" class="w-full h-full object-cover" src="assets/screen-venues-list.png"/>
+            </div>
+          </div>
+          <div class="absolute -right-12 top-20 w-64 aspect-[9/19] bg-[#080e1c] rounded-[2.5rem] p-3 border-[6px] border-[#1a202c] shadow-xl transform rotate-6 opacity-80 hidden lg:block">
+            <div class="w-full h-full bg-surface rounded-[1.8rem] overflow-hidden">
+              <img alt="App Screen" class="w-full h-full object-cover" src="assets/screen-profile.png"/>
+            </div>
+          </div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="py-24 bg-surface" id="cta">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="bg-inverse-surface rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center space-y-8">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <div class="absolute top-0 left-0 w-full h-full kinetic-gradient mix-blend-overlay"></div>
+        </div>
+        <div class="relative z-10 space-y-6">
+          <span class="text-primary-fixed font-bold uppercase tracking-[0.3em] text-sm">Phase 1: Early Access</span>
+          <h2 class="text-4xl md:text-7xl font-black text-white tracking-tighter italic uppercase leading-none">
+            Ready to <span class="text-primary-fixed">Elevate?</span>
+          </h2>
+          <p class="text-outline-variant text-lg max-w-xl mx-auto leading-relaxed">
+            Join the limited group of beta testers and be the first to launch your community on EinfachVolley.
+          </p>
+          <form id="waitlist-form" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 pt-6" action="https://formspree.io/f/mlgpydan" method="POST">
             <input
+              class="flex-1 bg-white/10 border-none rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-primary-fixed transition-all placeholder:text-outline-variant"
+              placeholder="Enter your email"
               type="email"
               name="email"
-              id="email-input"
-              placeholder="your@email.com"
               required
-              autocomplete="email"
             />
-            <button type="submit" class="btn btn-primary">
-              <span class="btn-text">Join the Waitlist</span>
-              <span class="btn-loading" hidden>Sending…</span>
+            <button type="submit" id="submit-btn" class="kinetic-gradient text-white font-bold px-8 py-4 rounded-xl hover:scale-105 transition-all shadow-xl shadow-primary/20">
+              Join Waitlist
             </button>
-          </div>
-          <p class="form-error" id="form-error" hidden></p>
-        </form>
-
-        <div id="success-message" class="success-message" hidden>
-          <div class="success-icon">🎉</div>
-          <h3>You're on the list!</h3>
-          <p>We'll reach out at launch. Tell your volleyball friends!</p>
+          </form>
+          <div id="success-msg" class="hidden text-primary-fixed font-semibold">You're on the list! We'll be in touch soon.</div>
+          <div id="error-msg" class="hidden text-red-400 font-semibold">Something went wrong. Please try again.</div>
+          <p class="text-outline-variant text-xs">No spam. Only volleyball updates.</p>
         </div>
       </div>
     </div>
   </section>
+</main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="nav-logo">EinfachVolley</span>
-      <p class="footer-note">&copy; 2026 EinfachVolley. All rights reserved.</p>
+<!-- Footer -->
+<footer class="bg-[#080e1c] w-full py-12 px-8">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+    <div class="text-lg font-bold text-white">EinfachVolley</div>
+    <div class="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-widest font-light text-[#a7adc0]">
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Privacy Policy</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Terms of Service</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Contact</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="venues.html">For Venue Owners</a>
     </div>
-  </footer>
+    <div class="text-xs uppercase tracking-widest font-light text-[#a7adc0]">
+      © 2024 EinfachVolley
+    </div>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<script>
+  const form = document.getElementById('waitlist-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const successMsg = document.getElementById('success-msg');
+  const errorMsg = document.getElementById('error-msg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.textContent = 'Joining...';
+    submitBtn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+      } else {
+        errorMsg.classList.remove('hidden');
+        submitBtn.textContent = 'Join Waitlist';
+        submitBtn.disabled = false;
+      }
+    } catch {
+      errorMsg.classList.remove('hidden');
+      submitBtn.textContent = 'Join Waitlist';
+      submitBtn.disabled = false;
+    }
+  });
+</script>
 </body>
 </html>
