@@ -1,183 +1,413 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EinfachVolley — List Your Venue</title>
-  <meta name="description" content="Partner with EinfachVolley and get your volleyball venue in front of hundreds of active players." />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EinfachVolley | List Your Venue</title>
+<meta name="description" content="Partner with EinfachVolley and get your volleyball venue in front of hundreds of active players." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="EinfachVolley — List Your Venue" />
-  <meta property="og:description" content="Partner with EinfachVolley and get your venue in front of active players." />
-  <meta property="og:type" content="website" />
+<!-- Open Graph -->
+<meta property="og:title" content="EinfachVolley — List Your Venue" />
+<meta property="og:description" content="Partner with EinfachVolley and get your venue in front of active players." />
+<meta property="og:type" content="website" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  .kinetic-gradient {
+    background: linear-gradient(135deg, #a63300 0%, #ff7949 100%);
+  }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f6f6ff; }
+  ::-webkit-scrollbar-thumb { background: #cbd4f1; border-radius: 10px; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-highest": "#d4dcf8",
+          "tertiary": "#853d97",
+          "tertiary-fixed": "#ef9dff",
+          "error-dim": "#9f0519",
+          "secondary-fixed": "#d7e2ff",
+          "secondary-container": "#d7e2ff",
+          "surface-bright": "#f6f6ff",
+          "outline": "#717688",
+          "on-surface": "#292e3e",
+          "on-background": "#292e3e",
+          "error-container": "#fb5151",
+          "on-surface-variant": "#555b6c",
+          "tertiary-dim": "#78308a",
+          "inverse-on-surface": "#979caf",
+          "tertiary-fixed-dim": "#e190f1",
+          "surface-tint": "#a63300",
+          "primary": "#a63300",
+          "on-primary-fixed-variant": "#551600",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-container": "#475269",
+          "surface-dim": "#cbd4f1",
+          "secondary-fixed-dim": "#c9d4f0",
+          "on-secondary-fixed": "#353f56",
+          "inverse-surface": "#080e1c",
+          "on-primary-fixed": "#000000",
+          "on-secondary": "#eff2ff",
+          "on-primary": "#ffefeb",
+          "surface-variant": "#d4dcf8",
+          "tertiary-container": "#ef9dff",
+          "on-tertiary": "#ffeefc",
+          "primary-fixed-dim": "#f7652f",
+          "on-tertiary-fixed": "#400050",
+          "secondary": "#515c73",
+          "inverse-primary": "#fe6a34",
+          "surface-container-low": "#edf0ff",
+          "on-primary-container": "#451000",
+          "primary-dim": "#922c00",
+          "primary-fixed": "#ff7949",
+          "background": "#f6f6ff",
+          "on-error": "#ffefee",
+          "secondary-dim": "#455067",
+          "primary-container": "#ff7949",
+          "outline-variant": "#a7adc0",
+          "on-tertiary-container": "#5e1470",
+          "on-tertiary-fixed-variant": "#681f7a",
+          "surface-container-high": "#dae2fc",
+          "surface-container": "#e1e8ff",
+          "on-secondary-fixed-variant": "#515c73",
+          "surface": "#f6f6ff",
+          "on-error-container": "#570008",
+          "error": "#b31b25"
+        },
+        fontFamily: {
+          "headline": ["Lexend"],
+          "body": ["Lexend"],
+          "label": ["Lexend"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
 </head>
-<body>
+<body class="bg-surface font-body text-on-surface antialiased">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">EinfachVolley</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-text-link">For Players</a>
-        <a href="#venue-form" class="btn btn-sm">List Your Venue</a>
-      </div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f6f6ff]/80 backdrop-blur-xl">
+  <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+    <a href="index.html" class="text-2xl font-black tracking-tighter text-[#a63300]">EinfachVolley</a>
+    <div class="hidden md:flex gap-8 font-medium text-sm tracking-tight items-center">
+      <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="index.html">For Players</a>
+      <a class="kinetic-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-200 shadow-lg shadow-primary/20" href="#venue-form">
+        List Your Venue
+      </a>
     </div>
-  </nav>
+    <button class="md:hidden text-primary">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero hero-venue">
-    <div class="hero-bg-pattern" aria-hidden="true"></div>
-    <div class="container hero-content reveal">
-      <span class="badge">Venue Partners</span>
-      <h1 class="hero-headline">Fill your courts.<br />Every week.</h1>
-      <p class="hero-sub">Partner with EinfachVolley and connect your venue with hundreds of active volleyball players in your area — for free.</p>
-      <a href="#venue-form" class="btn btn-primary btn-lg">Register Your Venue</a>
-      <p class="hero-note">We'll reach out before launch to get you set up.</p>
+<main>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center bg-inverse-surface overflow-hidden pt-20">
+    <div class="absolute inset-0 opacity-20">
+      <img alt="Volleyball venue" class="w-full h-full object-cover grayscale" src="assets/screen-venues-map.png"/>
     </div>
-  </section>
-
-  <!-- BENEFITS -->
-  <section class="problem section">
-    <div class="container reveal">
-      <h2 class="section-title">Why list on EinfachVolley?</h2>
-      <div class="problem-grid">
-        <div class="problem-item">
-          <div class="problem-icon">📣</div>
-          <p>Get discovered by local players actively looking for courts to play on</p>
+    <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-1/3 aspect-square kinetic-gradient rounded-full blur-[120px] opacity-30"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+      <div class="max-w-2xl space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span class="text-primary-container text-xs font-bold uppercase tracking-widest">Venue Partners</span>
         </div>
-        <div class="problem-item">
-          <div class="problem-icon">📅</div>
-          <p>Players book directly through the app — no phone calls, no admin work</p>
-        </div>
-        <div class="problem-item">
-          <div class="problem-icon">💰</div>
-          <p>Free to list. Set your own pricing and availability — you stay in control</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="features section">
-    <div class="container">
-      <h2 class="section-title reveal">How it works.</h2>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon">📝</div>
-          <h3>Register</h3>
-          <p>Fill in your venue details below. We'll review and get in touch before launch.</p>
-        </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon">⚙️</div>
-          <h3>We Set You Up</h3>
-          <p>Our team adds your venue to the app with your courts, pricing, and availability.</p>
-        </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon">🏐</div>
-          <h3>Players Find You</h3>
-          <p>Players nearby see your venue on the map and book slots for their matches.</p>
-        </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon">📊</div>
-          <h3>Track Bookings</h3>
-          <p>See who's coming, how many players, and manage your courts from one dashboard.</p>
+        <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] italic uppercase">
+          Fill your<br/>
+          <span class="text-primary-fixed">Courts.</span>
+        </h1>
+        <p class="text-xl text-outline-variant max-w-md font-light leading-relaxed">
+          Partner with EinfachVolley and connect your venue with hundreds of active volleyball players in your area — for free.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a class="kinetic-gradient text-on-primary px-8 py-4 rounded-xl font-bold text-lg text-center hover:scale-105 transition-all duration-300 shadow-2xl shadow-primary/30" href="#venue-form">
+            Register Your Venue
+          </a>
+          <a class="bg-surface-container-low/10 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg text-center hover:bg-white/5 transition-all" href="#benefits">
+            See the benefits
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VENUE FORM -->
-  <section class="waitlist section" id="venue-form">
-    <div class="container">
-      <div class="waitlist-box venue-form-box reveal">
-        <h2 class="waitlist-title">Register your venue.</h2>
-        <p class="waitlist-sub">Fill in the details below and we'll contact you before launch to get everything set up.</p>
-
-        <form id="venue-registration-form" novalidate>
-
-          <div class="field-group">
-            <label for="venue-name">Venue Name <span class="required">*</span></label>
-            <input type="text" id="venue-name" name="venue_name" placeholder="e.g. FEKI Troppauplatz" required />
+  <!-- Benefits Section -->
+  <section class="py-24 bg-surface" id="benefits">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-sm">Why Partner With Us</span>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight mt-4 text-on-surface">Why list on <span class="text-secondary">EinfachVolley?</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-3xl bg-surface-container-low space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined">campaign</span>
           </div>
-
-          <div class="field-group">
-            <label for="venue-address">Address <span class="required">*</span></label>
-            <input type="text" id="venue-address" name="venue_address" placeholder="Street, City" required />
+          <h3 class="text-xl font-bold">Maximum Visibility</h3>
+          <p class="text-on-surface-variant leading-relaxed">Get discovered by local players actively looking for courts to play on — no extra marketing needed.</p>
+        </div>
+        <div class="p-8 rounded-3xl bg-surface-container-low space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined">event_available</span>
           </div>
-
-          <div class="field-row">
-            <div class="field-group">
-              <label for="contact-email">Contact Email <span class="required">*</span></label>
-              <input type="email" id="contact-email" name="contact_email" placeholder="you@example.com" required autocomplete="email" />
-            </div>
-            <div class="field-group">
-              <label for="contact-phone">Phone (optional)</label>
-              <input type="tel" id="contact-phone" name="contact_phone" placeholder="+49 123 456789" />
-            </div>
+          <h3 class="text-xl font-bold">Zero Admin Work</h3>
+          <p class="text-on-surface-variant leading-relaxed">Players book directly through the app — no phone calls, no back-and-forth, no paperwork.</p>
+        </div>
+        <div class="p-8 rounded-3xl bg-surface-container-low space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined">sell</span>
           </div>
-
-          <div class="field-group">
-            <label>Court Type <span class="required">*</span></label>
-            <div class="checkbox-group">
-              <label class="checkbox-label">
-                <input type="checkbox" name="court_type" value="Indoor" /> Indoor
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="court_type" value="Outdoor" /> Outdoor
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="court_type" value="Beach" /> Beach
-              </label>
-            </div>
-          </div>
-
-          <div class="field-row">
-            <div class="field-group">
-              <label for="num-courts">Number of Courts</label>
-              <input type="number" id="num-courts" name="num_courts" placeholder="e.g. 2" min="1" />
-            </div>
-            <div class="field-group">
-              <label for="pricing">Pricing</label>
-              <input type="text" id="pricing" name="pricing" placeholder="e.g. Free / €5 per person" />
-            </div>
-          </div>
-
-          <div class="field-group">
-            <label for="notes">Additional Notes</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Parking, access rules, equipment available…"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full">
-            <span class="btn-text">Submit Venue</span>
-            <span class="btn-loading" hidden>Sending…</span>
-          </button>
-          <p class="form-error" id="venue-form-error" hidden></p>
-        </form>
-
-        <div id="venue-success-message" class="success-message" hidden>
-          <div class="success-icon">🎉</div>
-          <h3>Venue registered!</h3>
-          <p>We'll be in touch before launch to get your venue fully set up.</p>
+          <h3 class="text-xl font-bold">Free to List</h3>
+          <p class="text-on-surface-variant leading-relaxed">Set your own pricing and availability — you stay in control, we take care of the rest.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="nav-logo">EinfachVolley</span>
-      <p class="footer-note">&copy; 2026 EinfachVolley. All rights reserved.</p>
+  <!-- How It Works Section -->
+  <section class="py-24 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">How it <span class="text-primary">Works.</span></h2>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Getting your venue on EinfachVolley is simple and fast.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[220px]">
+        <!-- Step 1 -->
+        <div class="md:col-span-6 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between overflow-hidden relative group">
+          <div class="w-8 h-8 rounded-full kinetic-gradient flex items-center justify-center text-white font-bold text-sm flex-shrink-0">1</div>
+          <div>
+            <h3 class="text-2xl font-bold">Register</h3>
+            <p class="text-on-surface-variant mt-2">Fill in your venue details below. We'll review and get in touch before launch.</p>
+          </div>
+          <div class="absolute right-4 bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span class="material-symbols-outlined" style="font-size: 120px;">edit_note</span>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="md:col-span-6 bg-[#080e1c] p-8 rounded-[2rem] text-white flex flex-col justify-between overflow-hidden relative group">
+          <div class="w-8 h-8 rounded-full kinetic-gradient flex items-center justify-center text-white font-bold text-sm flex-shrink-0">2</div>
+          <div>
+            <h3 class="text-2xl font-bold">We Set You Up</h3>
+            <p class="text-outline-variant mt-2">Our team adds your venue to the app with your courts, pricing, and availability.</p>
+          </div>
+          <div class="absolute right-4 bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span class="material-symbols-outlined" style="font-size: 120px;">settings</span>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="md:col-span-4 bg-tertiary-container p-8 rounded-[2rem] flex flex-col justify-between text-on-tertiary-container overflow-hidden relative group">
+          <div class="w-8 h-8 rounded-full bg-tertiary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">3</div>
+          <div>
+            <h3 class="text-2xl font-bold">Players Find You</h3>
+            <p class="font-medium mt-2">Players nearby see your venue on the map and book slots for their matches.</p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="md:col-span-8 bg-surface-container-highest p-8 rounded-[2rem] flex flex-col md:flex-row items-center gap-8 overflow-hidden">
+          <div class="flex-1">
+            <div class="w-8 h-8 rounded-full kinetic-gradient flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mb-4">4</div>
+            <h3 class="text-2xl font-bold text-on-surface">Track Bookings</h3>
+            <p class="text-on-surface-variant mt-2">See who's coming, how many players, and manage your courts from one dashboard.</p>
+          </div>
+          <div class="flex-1 w-full bg-white/50 backdrop-blur rounded-2xl p-4 shadow-sm">
+            <div class="h-28 flex items-end gap-2">
+              <div class="flex-1 kinetic-gradient h-[50%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[80%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[60%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[100%] rounded-t-lg"></div>
+              <div class="flex-1 kinetic-gradient h-[70%] rounded-t-lg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="venue-script.js"></script>
+  <!-- Venue Registration Form -->
+  <section class="py-24 bg-surface" id="venue-form">
+    <div class="max-w-3xl mx-auto px-8">
+      <div class="bg-inverse-surface rounded-[3rem] p-12 md:p-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <div class="absolute top-0 left-0 w-full h-full kinetic-gradient mix-blend-overlay"></div>
+        </div>
+        <div class="relative z-10 space-y-8">
+          <div class="space-y-3">
+            <span class="text-primary-fixed font-bold uppercase tracking-[0.3em] text-sm">Partner Registration</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter italic uppercase leading-none">
+              Register your <span class="text-primary-fixed">Venue.</span>
+            </h2>
+            <p class="text-outline-variant text-lg leading-relaxed">
+              Fill in the details below and we'll contact you before launch to get everything set up.
+            </p>
+          </div>
+
+          <form id="venue-registration-form" action="https://formspree.io/f/xvzwjzzl" method="POST" class="space-y-6">
+            <!-- Venue Name -->
+            <div class="space-y-2">
+              <label class="block text-white font-semibold text-sm uppercase tracking-widest">Venue Name <span class="text-primary-fixed">*</span></label>
+              <input
+                type="text" name="venue_name" required
+                placeholder="e.g. FEKI Troppauplatz"
+                class="w-full bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-outline-variant focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all"
+              />
+            </div>
+
+            <!-- Address -->
+            <div class="space-y-2">
+              <label class="block text-white font-semibold text-sm uppercase tracking-widest">Address <span class="text-primary-fixed">*</span></label>
+              <input
+                type="text" name="venue_address" required
+                placeholder="Street, City"
+                class="w-full bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-outline-variant focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all"
+              />
+            </div>
+
+            <!-- Email & Phone -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="block text-white font-semibold text-sm uppercase tracking-widest">Contact Email <span class="text-primary-fixed">*</span></label>
+                <input
+                  type="email" name="contact_email" required autocomplete="email"
+                  placeholder="you@example.com"
+                  class="w-full bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-outline-variant focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all"
+                />
+              </div>
+              <div class="space-y-2">
+                <label class="block text-white font-semibold text-sm uppercase tracking-widest">Phone <span class="text-outline-variant font-normal normal-case tracking-normal">(optional)</span></label>
+                <input
+                  type="tel" name="contact_phone"
+                  placeholder="+49 123 456789"
+                  class="w-full bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-outline-variant focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Court Type -->
+            <div class="space-y-3">
+              <label class="block text-white font-semibold text-sm uppercase tracking-widest">Court Type <span class="text-primary-fixed">*</span></label>
+              <div class="flex flex-wrap gap-3">
+                <label class="flex items-center gap-2 bg-white/10 border border-white/10 rounded-xl px-5 py-3 text-white cursor-pointer hover:bg-white/15 transition-all">
+                  <input type="checkbox" name="court_type" value="Indoor" class="accent-[#ff7949]"/> Indoor
+                </label>
+                <label class="flex items-center gap-2 bg-white/10 border border-white/10 rounded-xl px-5 py-3 text-white cursor-pointer hover:bg-white/15 transition-all">
+                  <input type="checkbox" name="court_type" value="Outdoor" class="accent-[#ff7949]"/> Outdoor
+                </label>
+                <label class="flex items-center gap-2 bg-white/10 border border-white/10 rounded-xl px-5 py-3 text-white cursor-pointer hover:bg-white/15 transition-all">
+                  <input type="checkbox" name="court_type" value="Beach" class="accent-[#ff7949]"/> Beach
+                </label>
+              </div>
+            </div>
+
+            <!-- Courts & Pricing -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="block text-white font-semibold text-sm uppercase tracking-widest">Number of Courts</label>
+                <input
+                  type="number" name="num_courts" min="1"
+                  placeholder="e.g. 2"
+                  class="w-full bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-outline-variant focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all"
+                />
+              </div>
+              <div class="space-y-2">
+                <label class="block text-white font-semibold text-sm uppercase tracking-widest">Pricing</label>
+                <input
+                  type="text" name="pricing"
+                  placeholder="e.g. Free / €5 per person"
+                  class="w-full bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-outline-variant focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div class="space-y-2">
+              <label class="block text-white font-semibold text-sm uppercase tracking-widest">Additional Notes</label>
+              <textarea
+                name="notes" rows="3"
+                placeholder="Parking, access rules, equipment available…"
+                class="w-full bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-outline-variant focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all resize-none"
+              ></textarea>
+            </div>
+
+            <button type="submit" id="venue-submit-btn" class="w-full kinetic-gradient text-white font-bold px-8 py-4 rounded-xl hover:scale-[1.02] transition-all shadow-xl shadow-primary/20 text-lg">
+              Submit Venue
+            </button>
+          </form>
+
+          <div id="venue-success-message" class="hidden text-center space-y-3 py-4">
+            <div class="text-4xl">🎉</div>
+            <h3 class="text-2xl font-bold text-white">Venue registered!</h3>
+            <p class="text-outline-variant">We'll be in touch before launch to get your venue fully set up.</p>
+          </div>
+          <div id="venue-error-message" class="hidden text-red-400 font-semibold text-center">Something went wrong. Please try again.</div>
+
+          <p class="text-outline-variant text-xs text-center">We'll review your submission and reach out before launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#080e1c] w-full py-12 px-8">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+    <div class="text-lg font-bold text-white">EinfachVolley</div>
+    <div class="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-widest font-light text-[#a7adc0]">
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Privacy Policy</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Terms of Service</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Contact</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="index.html">For Players</a>
+    </div>
+    <div class="text-xs uppercase tracking-widest font-light text-[#a7adc0]">
+      © 2024 EinfachVolley
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('venue-registration-form');
+  const submitBtn = document.getElementById('venue-submit-btn');
+  const successMsg = document.getElementById('venue-success-message');
+  const errorMsg = document.getElementById('venue-error-message');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+      } else {
+        errorMsg.classList.remove('hidden');
+        submitBtn.textContent = 'Submit Venue';
+        submitBtn.disabled = false;
+      }
+    } catch {
+      errorMsg.classList.remove('hidden');
+      submitBtn.textContent = 'Submit Venue';
+      submitBtn.disabled = false;
+    }
+  });
+</script>
 </body>
 </html>
