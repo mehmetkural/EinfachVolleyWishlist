@@ -152,7 +152,7 @@
   <!-- DESKTOP HERO -->
   <section class="hidden md:flex relative min-h-screen items-center bg-inverse-surface overflow-hidden pt-20">
     <div class="absolute inset-0 opacity-20">
-      <img alt="Volleyball action" class="w-full h-full object-cover grayscale" src="assets/screen-matches.png"/>
+      <img alt="Volleyball action" class="w-full h-full object-cover grayscale" src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=1600&auto=format&fit=crop&q=80"/>
     </div>
     <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-1/3 aspect-square kinetic-gradient rounded-full blur-[120px] opacity-30"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center">
@@ -436,7 +436,15 @@
   <!-- MOBILE CTA -->
   <section class="md:hidden px-6 py-24 bg-surface-container-low text-center" id="cta-mobile">
     <h2 class="font-black text-4xl mb-6 tracking-tighter text-on-background uppercase italic">READY TO ELEVATE?</h2>
-    <p class="text-on-surface-variant mb-10 max-w-xs mx-auto">Be the first to experience the future of volleyball community management.</p>
+    <p class="text-on-surface-variant mb-6 max-w-xs mx-auto">Be the first to experience the future of volleyball community management.</p>
+    <div class="flex items-center justify-center gap-3 mb-8">
+      <div class="flex -space-x-2">
+        <div class="w-7 h-7 rounded-full kinetic-gradient border-2 border-surface-container-low flex items-center justify-center text-white text-xs font-bold">J</div>
+        <div class="w-7 h-7 rounded-full bg-tertiary border-2 border-surface-container-low flex items-center justify-center text-white text-xs font-bold">M</div>
+        <div class="w-7 h-7 rounded-full bg-secondary border-2 border-surface-container-low flex items-center justify-center text-white text-xs font-bold">A</div>
+      </div>
+      <span class="text-on-surface-variant text-sm"><span class="text-on-surface font-bold">142 players</span> already waiting</span>
+    </div>
     <div class="w-full max-w-sm mx-auto bg-surface-container-lowest p-8 rounded-2xl shadow-xl border-l-8 border-primary">
       <form id="waitlist-form-mobile" action="https://formspree.io/f/mlgpydan" method="POST" class="space-y-4">
         <div class="text-left">
@@ -474,6 +482,16 @@
           <p class="text-outline-variant text-lg max-w-xl mx-auto leading-relaxed">
             Join the limited group of beta testers and be the first to launch your community on EinfachVolley.
           </p>
+          <!-- Social proof -->
+          <div class="flex items-center justify-center gap-3">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full kinetic-gradient border-2 border-inverse-surface flex items-center justify-center text-white text-xs font-bold">J</div>
+              <div class="w-8 h-8 rounded-full bg-tertiary border-2 border-inverse-surface flex items-center justify-center text-white text-xs font-bold">M</div>
+              <div class="w-8 h-8 rounded-full bg-secondary border-2 border-inverse-surface flex items-center justify-center text-white text-xs font-bold">A</div>
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-inverse-surface flex items-center justify-center text-on-surface text-xs font-bold">+</div>
+            </div>
+            <span class="text-outline-variant text-sm"><span class="text-white font-bold">142 players</span> already on the waitlist</span>
+          </div>
           <form id="waitlist-form" class="max-w-md mx-auto flex gap-3 pt-6" action="https://formspree.io/f/mlgpydan" method="POST">
             <input
               class="flex-1 bg-white/10 border-none rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-primary-fixed transition-all placeholder:text-outline-variant"

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FEKI Troppauplatz — EinfachVolley</title>
+<meta name="description" content="Book volleyball courts at FEKI Troppauplatz on EinfachVolley. Indoor & outdoor courts, €5/person, Bamberg." />
+<meta property="og:title" content="FEKI Troppauplatz — EinfachVolley" />
+<meta property="og:description" content="Book volleyball courts at FEKI Troppauplatz." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/og-image.png" />
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  .kinetic-gradient { background: linear-gradient(135deg, #a63300 0%, #ff7949 100%); }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f6f6ff; }
+  ::-webkit-scrollbar-thumb { background: #cbd4f1; border-radius: 10px; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-highest": "#d4dcf8", "tertiary": "#853d97",
+          "surface-bright": "#f6f6ff", "outline": "#717688",
+          "on-surface": "#292e3e", "on-surface-variant": "#555b6c",
+          "surface-tint": "#a63300", "primary": "#a63300",
+          "surface-container-lowest": "#ffffff", "surface-dim": "#cbd4f1",
+          "inverse-surface": "#080e1c", "on-primary": "#ffefeb",
+          "tertiary-container": "#ef9dff", "on-tertiary": "#ffeefc",
+          "primary-fixed-dim": "#f7652f", "secondary": "#515c73",
+          "surface-container-low": "#edf0ff", "primary-fixed": "#ff7949",
+          "background": "#f6f6ff", "primary-container": "#ff7949",
+          "outline-variant": "#a7adc0", "on-tertiary-container": "#5e1470",
+          "surface-container-high": "#dae2fc", "surface-container": "#e1e8ff",
+          "surface": "#f6f6ff", "error": "#b31b25",
+          "on-secondary": "#eff2ff", "on-primary-container": "#451000",
+        },
+        fontFamily: { "headline": ["Lexend"], "body": ["Lexend"], "label": ["Lexend"] },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full z-50 bg-[#f6f6ff]/80 backdrop-blur-xl">
+  <div class="flex justify-between items-center h-16 md:h-20 px-6 md:px-8 max-w-7xl mx-auto">
+    <div class="flex items-center gap-3">
+      <a href="venues.html" class="md:hidden flex items-center gap-1 text-[#515c73]">
+        <span class="material-symbols-outlined text-xl">arrow_back</span>
+      </a>
+      <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter text-[#a63300] italic uppercase">EinfachVolley</a>
+    </div>
+    <div class="hidden md:flex gap-8 font-medium text-sm tracking-tight items-center">
+      <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="index.html">For Players</a>
+      <a class="text-[#515c73] hover:text-[#a63300] transition-colors" href="venues.html">All Venues</a>
+      <a class="kinetic-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-200 shadow-lg" href="#book">
+        Book a Court
+      </a>
+    </div>
+    <div class="md:hidden w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center">
+      <span class="material-symbols-outlined text-[#515c73] text-xl">share</span>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20 md:pb-0 pt-16 md:pt-20">
+
+  <!-- Hero Image -->
+  <div class="relative h-64 md:h-[480px] bg-inverse-surface overflow-hidden">
+    <img
+      alt="FEKI Troppauplatz volleyball courts"
+      class="w-full h-full object-cover opacity-60"
+      src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=1600&auto=format&fit=crop&q=80"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-[#080e1c] via-transparent to-transparent"></div>
+    <!-- Floating tags -->
+    <div class="absolute bottom-6 left-6 flex flex-wrap gap-2">
+      <span class="bg-primary/90 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Indoor</span>
+      <span class="bg-secondary/90 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Outdoor</span>
+      <span class="bg-surface-container/90 text-on-surface text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">4 Courts</span>
+    </div>
+    <!-- Rating badge -->
+    <div class="absolute top-4 right-4 md:top-6 md:right-6 bg-surface-container-lowest/90 backdrop-blur px-4 py-2 rounded-xl flex items-center gap-2 shadow-lg">
+      <span class="material-symbols-outlined text-yellow-500 text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+      <span class="font-black text-on-surface">4.8</span>
+      <span class="text-on-surface-variant text-sm">(32)</span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+
+      <!-- Left: Venue Info -->
+      <div class="md:col-span-2 space-y-8">
+
+        <!-- Title & Location -->
+        <div>
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase italic">FEKI Troppauplatz</h1>
+              <div class="flex items-center gap-2 mt-2 text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                <span class="text-sm md:text-base">Troppauplatz, 96052 Bamberg</span>
+              </div>
+            </div>
+            <button class="p-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors flex-shrink-0">
+              <span class="material-symbols-outlined">favorite_border</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-surface-container-low rounded-2xl p-4 text-center">
+            <div class="text-2xl font-black text-primary">€5</div>
+            <div class="text-on-surface-variant text-xs mt-1 uppercase tracking-wider">per person</div>
+          </div>
+          <div class="bg-surface-container-low rounded-2xl p-4 text-center">
+            <div class="text-2xl font-black text-on-surface">1.5h</div>
+            <div class="text-on-surface-variant text-xs mt-1 uppercase tracking-wider">slot duration</div>
+          </div>
+          <div class="bg-surface-container-low rounded-2xl p-4 text-center">
+            <div class="text-2xl font-black text-on-surface">12</div>
+            <div class="text-on-surface-variant text-xs mt-1 uppercase tracking-wider">max players</div>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="space-y-3">
+          <h2 class="text-xl font-bold">About this venue</h2>
+          <p class="text-on-surface-variant leading-relaxed">
+            FEKI Troppauplatz is one of Bamberg's most popular outdoor volleyball spots, located right next to the university. With 4 full-size courts and a welcoming community, it's the go-to place for casual and competitive games alike.
+          </p>
+        </div>
+
+        <!-- Court Types -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-bold">Available Courts</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="bg-surface-container-lowest border border-surface-container-high rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg kinetic-gradient flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-sm">home</span>
+                  </div>
+                  <span class="font-bold">Indoor Courts</span>
+                </div>
+                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full font-bold">2 courts</span>
+              </div>
+              <p class="text-on-surface-variant text-sm">Air-conditioned, hardwood floor. Net height: 2.43m (M) / 2.24m (W)</p>
+            </div>
+            <div class="bg-surface-container-lowest border border-surface-container-high rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-sm">wb_sunny</span>
+                  </div>
+                  <span class="font-bold">Outdoor Courts</span>
+                </div>
+                <span class="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded-full font-bold">2 courts</span>
+              </div>
+              <p class="text-on-surface-variant text-sm">Sand court. Mixed net 2.35m. Open Apr–Oct.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- App Screenshots -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-bold">Venue in the App</h2>
+          <div class="flex gap-4 overflow-x-auto pb-2 -mx-1 px-1">
+            <div class="flex-shrink-0 w-36 md:w-44 rounded-2xl overflow-hidden shadow-md border border-surface-container-high aspect-[9/19]">
+              <img alt="Venue Detail Screen" class="w-full h-full object-cover" src="assets/screen-venue-detail.png"/>
+            </div>
+            <div class="flex-shrink-0 w-36 md:w-44 rounded-2xl overflow-hidden shadow-md border border-surface-container-high aspect-[9/19]">
+              <img alt="Venues List Screen" class="w-full h-full object-cover" src="assets/screen-venues-list.png"/>
+            </div>
+            <div class="flex-shrink-0 w-36 md:w-44 rounded-2xl overflow-hidden shadow-md border border-surface-container-high aspect-[9/19]">
+              <img alt="Venues Map Screen" class="w-full h-full object-cover" src="assets/screen-venues-map.png"/>
+            </div>
+          </div>
+          <p class="text-on-surface-variant text-sm">Browse courts, check availability, and join matches — all in EinfachVolley.</p>
+        </div>
+
+        <!-- Upcoming Matches -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold">Upcoming Matches Here</h2>
+            <a href="index.html#cta-mobile" class="text-primary text-sm font-bold hover:underline">View all →</a>
+          </div>
+          <div class="space-y-3">
+            <div class="bg-surface-container-lowest border border-surface-container-high rounded-2xl p-5">
+              <div class="flex items-start justify-between gap-3">
+                <div class="space-y-2 flex-1">
+                  <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded-full font-bold">Mixed</span>
+                    <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded-full">Lv 1–5</span>
+                    <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded-full">€5/person</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-on-surface-variant text-sm">
+                    <span class="material-symbols-outlined text-base">calendar_today</span>
+                    <span>Sat, Mar 28 at 01:20 PM · 1.5 h</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 bg-surface-container rounded-full h-1.5 overflow-hidden">
+                      <div class="kinetic-gradient h-full rounded-full" style="width: 42%"></div>
+                    </div>
+                    <span class="text-xs text-on-surface-variant font-medium">5/12</span>
+                  </div>
+                </div>
+                <span class="flex-shrink-0 text-xs bg-primary/10 text-primary font-bold px-3 py-1.5 rounded-full">7 spots</span>
+              </div>
+            </div>
+            <div class="bg-surface-container-lowest border border-surface-container-high rounded-2xl p-5">
+              <div class="flex items-start justify-between gap-3">
+                <div class="space-y-2 flex-1">
+                  <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-full font-bold">Men's</span>
+                    <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded-full">Lv 3–6</span>
+                    <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded-full">Free</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-on-surface-variant text-sm">
+                    <span class="material-symbols-outlined text-base">calendar_today</span>
+                    <span>Sun, Mar 29 at 10:00 AM · 2 h</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 bg-surface-container rounded-full h-1.5 overflow-hidden">
+                      <div class="kinetic-gradient h-full rounded-full" style="width: 75%"></div>
+                    </div>
+                    <span class="text-xs text-on-surface-variant font-medium">9/12</span>
+                  </div>
+                </div>
+                <span class="flex-shrink-0 text-xs bg-error/10 text-error font-bold px-3 py-1.5 rounded-full">3 left</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Booking CTA (desktop) -->
+      <div class="hidden md:block">
+        <div class="sticky top-28 space-y-6">
+          <div class="bg-surface-container-lowest border border-surface-container-high rounded-3xl p-8 shadow-xl space-y-6" id="book">
+            <div>
+              <span class="text-primary font-bold uppercase tracking-widest text-xs">Available on EinfachVolley</span>
+              <h3 class="text-2xl font-black mt-2 tracking-tight">Book a Court</h3>
+              <p class="text-on-surface-variant text-sm mt-2">Download the app to check live availability and join or create matches at this venue.</p>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary">check_circle</span>
+                <span>Real-time court availability</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary">check_circle</span>
+                <span>Instant RSVP confirmation</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary">check_circle</span>
+                <span>Find players to fill your team</span>
+              </div>
+            </div>
+            <a href="index.html#cta" class="kinetic-gradient text-white font-bold px-6 py-4 rounded-xl hover:scale-105 transition-all shadow-xl shadow-primary/20 block text-center">
+              Join Waitlist to Book
+            </a>
+            <p class="text-on-surface-variant text-xs text-center">App launching soon — join the waitlist for early access</p>
+          </div>
+
+          <!-- Venue owner CTA -->
+          <div class="bg-inverse-surface rounded-3xl p-6 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary-fixed">business</span>
+              <span class="text-white font-bold text-sm">Own a venue like this?</span>
+            </div>
+            <p class="text-outline-variant text-xs leading-relaxed">List your courts on EinfachVolley for free and get discovered by hundreds of local players.</p>
+            <a href="venues.html#venue-form" class="text-primary-fixed text-sm font-bold hover:underline block">Register your venue →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- Mobile CTA bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-[#f6f6ff]/95 backdrop-blur-xl z-40 p-4 md:hidden border-t border-surface-container flex items-center gap-4">
+  <div class="flex-1">
+    <div class="text-xs text-on-surface-variant">Starting from</div>
+    <div class="font-black text-primary text-xl">€5 <span class="text-on-surface-variant text-sm font-normal">/ person</span></div>
+  </div>
+  <a href="index.html#cta-mobile" class="kinetic-gradient text-white font-bold px-6 py-3.5 rounded-xl shadow-lg flex-shrink-0">
+    Join Waitlist
+  </a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-[#080e1c] w-full py-12 px-8">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto text-center md:text-left">
+    <div class="text-lg font-bold text-white italic uppercase tracking-tight">EinfachVolley</div>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs uppercase tracking-widest font-light text-[#a7adc0]">
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Privacy</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Terms</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="#">Contact</a>
+      <a class="hover:text-[#ff7949] transition-all duration-300" href="venues.html">All Venues</a>
+    </div>
+    <div class="text-xs uppercase tracking-widest font-light text-[#a7adc0]">© 2024 EinfachVolley</div>
+  </div>
+</footer>
+
+</body>
+</html>
